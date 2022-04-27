@@ -3,7 +3,11 @@
     <div class="header-group">
       <div class="flex items-center justify-between py-10">
         <div class="w-28 lg:w-36">
-          <img class="w-full" src="../../assets/image/logo.png" alt="logo feedbacker" />
+          <img
+            class="w-full"
+            src="../../assets/image/logo.png"
+            alt="logo feedbacker"
+          />
         </div>
 
         <div class="flex">
@@ -16,6 +20,7 @@
               text-white
               focus:outline-none
             "
+            @click="() =>emit('create-account')"
           >
             Crie uma conta
           </button>
@@ -29,6 +34,7 @@
               text-brand-main
               focus:outline-none
             "
+            @click="() => emit('login')"
           >
             Entrar
           </button>
@@ -70,7 +76,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  setup (_, { emit }) {
+    return { emit }
+  }
+}
 </script>
 
 <style lang="postcss" scoped>
@@ -83,7 +93,7 @@ export default {}
   @apply flex flex-col w-4/5 max-w-6xl;
 }
 
-@media (min-width: 640px){
+@media (min-width: 640px) {
   .header-group {
     background-image: url(../../assets/image/blue-balloons.png);
     background-size: 628px;
