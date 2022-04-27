@@ -1,5 +1,5 @@
 <template>
-  <customHeader />
+  <customHeader @login="handleLogin" @create-account="handleAccountCreate" />
   <Contact />
   <div class="flex jusitfy-center  py-10 bg-brand-gray">
     <p class="font-medium mx-auto text-gray-800">feedbacker &copy; 2022</p>
@@ -11,6 +11,7 @@ import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import CustomHeader from './CustomHeader.vue'
 import Contact from './Contact.vue'
+import useModal from '../../hooks/useModal'
 
 export default {
   components: {
@@ -20,6 +21,7 @@ export default {
 
   setup () {
     const router = useRouter()
+    const modal = useModal()
 
     // Antes do componente renderizar
     onMounted(() => {
@@ -30,8 +32,16 @@ export default {
     })
 
     // Funções
-    const handleLogin = () => {}
-    const handleAccountCreate = () => {}
+    const handleLogin = () => {
+      modal.open({
+        component: 'ModalLogin'
+      })
+    }
+    const handleAccountCreate = () => {
+      modal.open({
+        component: 'ModalCreateAccount'
+      })
+    }
 
     return {
       handleLogin,
