@@ -18,5 +18,24 @@ export default httpClient => ({
       data: response.data,
       erros
     }
+  },
+
+  create: async ({ name, email, password }) => {
+    const response = await httpClient.post('/auth/register', {
+      name, email, password
+    })
+
+    let erros = null
+    if (!response.data) {
+      erros = {
+        status: response.request.status,
+        statusText: response.request.statusText
+      }
+    }
+
+    return {
+      data: response.data,
+      erros
+    }
   }
 })
