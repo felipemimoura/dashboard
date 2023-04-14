@@ -6,10 +6,14 @@ import {RiDashboardLine} from "react-icons/ri"
 export const SidebarNav =  () => {
     return(
         <Stack spacing="12" alignItems="flex-start">
-            <NavSection title="Aplicações">
+            <NavSection title="Cadastro Aplicações">
                 <NavLink href="/dashboard" icon={RiDashboardLine}>
                     Dashboard
                 </NavLink>
+                <NavLink href="/test" icon={RiDashboardLine}>
+                    teste
+                </NavLink>
+            
             </NavSection>
         </Stack>
     )
