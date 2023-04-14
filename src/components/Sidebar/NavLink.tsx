@@ -25,9 +25,9 @@ export const NavLink = ({
       shouldMatchExactHref={shouldMatchExactHref}
       passHref
     >
-      <ChakraLink display="flex" alignItems="center" {...rest}>
+      <ChakraLink display="flex" alignContent="center" {...rest}>
         <Icon as={icon} fontSize="20" />
-        <Text marginTop="4" fontWeight="medium">{children}</Text>
+        <Text marginLeft="4" fontWeight="medium">{children}</Text>
       </ChakraLink>
     </ActiveLink>
   );
