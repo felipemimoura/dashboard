@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from "yup"
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,12 +19,14 @@ const signInFormSchema = yup.object({
   password: yup.string().required('Senha obrigatória')
 })
 export default function Home() {
+  const router = useRouter();
   const { register, handleSubmit, formState } = useForm<SignInFormData>({
     resolver: yupResolver(signInFormSchema)
   })
 
   const handleSignIn: SubmitHandler<SignInFormData> = async(data) => {
-    console.log(data)
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    await router.push('/dashboard');
   }
   return (
     <Flex width="100vw" height="100vh" align="center" justify="center" direction="column">
