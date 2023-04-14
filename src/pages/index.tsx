@@ -32,11 +32,11 @@ export default function Home() {
     <Flex width="100vw" height="100vh" align="center" justify="center" direction="column">
       <Stack>
         <Image src="logo.svg"  alt="Pacto Energia"/>
-        <Flex as="form" width="100%" maxWidth={360} bg="#1F2029" p="8" borderRadius={8} flexDir="column" onSubmit={handleSubmit(handleSignIn)}>
+        <Flex as="form" width="100%" maxWidth={360} bg="blue.800" p="8" borderRadius={8} flexDir="column" onSubmit={handleSubmit(handleSignIn)}>
 
           <Stack spacing="4">
-            <Input  type="email" {...register('email')} error={formState.errors.email} />
-            <Input type="password" {...register('password')} error={formState.errors.password} />
+            <Input label="E-mail" type="email" {...register('email')} error={formState.errors.email} />
+            <Input label="Senha" type="password" {...register('password')} error={formState.errors.password} />
           </Stack>
           <Button type='submit' mt="6" size="lg">Entrar</Button>
         </Flex>
