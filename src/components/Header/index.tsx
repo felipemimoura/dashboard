@@ -33,6 +33,7 @@ export const Header = () => {
           fontSize="24"
           marginRight="2"
           variant="unstyled"
+          color="white"
         ></IconButton>
       )}
       {isWideVersion && (
