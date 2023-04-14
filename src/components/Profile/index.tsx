@@ -8,8 +8,8 @@ export const Profile = ({ showProfileData = true }: ProfileProps) => {
     <Flex align="center">
       {showProfileData && (
         <Box marginRight="4" textAlign="right">
-          <Text>Pacto Developer</Text>
-          <Text fontSize="small">developer@pacto.com.br</Text>
+          <Text color="blue.100">Pacto Developer</Text>
+          <Text color="blue.300" fontSize="small">developer@pacto.com.br</Text>
         </Box>
       )}
 
