@@ -1,4 +1,5 @@
 import { Flex, Image } from "@chakra-ui/react";
+import { Profile } from "../Profile";
 
 export const Header = () => {
   return (
@@ -19,6 +20,9 @@ export const Header = () => {
         boxSize="150px"
         objectFit="fill"
       />
+      <Flex align="center" marginLeft="auto">
+        <Profile />
+      </Flex>
     </Flex>
   );
 };
