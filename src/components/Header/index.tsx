@@ -24,7 +24,6 @@ export const Header = () => {
       marginTop="4"
       paddingX="6"
       align="center"
-      border="2px"
     >
       {!isWideVersion && (
         <IconButton
