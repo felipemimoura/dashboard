@@ -1,5 +1,5 @@
 import { Input } from '@/components/Form'
-import { Button, Flex, Stack } from '@chakra-ui/react'
+import { Button, Flex, Stack,Image } from '@chakra-ui/react'
 import { Inter } from 'next/font/google'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <Flex width="100vw" height="100vh" align="center" justify="center" direction="column">
       <Stack>
-        <h1>Logo</h1>
+        <Image src="logo.svg"  alt="Pacto Energia"/>
         <Flex as="form" width="100%" maxWidth={360} bg="#1F2029" p="8" borderRadius={8} flexDir="column" onSubmit={handleSubmit(handleSignIn)}>
 
           <Stack spacing="4">
