@@ -8,7 +8,7 @@ type NavSectionProps = {
 export const NavSection = ({ children, title }: NavSectionProps) => {
   return (
     <Box>
-      <Text fontWeight="bold" fontSize="small">
+      <Text fontWeight="bold" color="white" fontSize="small">
         {title}
       </Text>
       <Stack spacing="4" marginTop="8" align="stretch">
